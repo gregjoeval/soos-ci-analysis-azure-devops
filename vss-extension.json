@@ -1,0 +1,36 @@
+{
+  "manifestVersion": 1,
+  "id": "SOOS-Security-Analysis",
+  "name": "SOOS Security Analysis",
+  "description": "OSS Security for Everyone",
+  "publisher": "SOOS",
+  "version": "0.1.1",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "icons": {
+    "default": "images/extension-icon.png"
+  },
+  "files": [
+    {
+      "path": "buildAndReleaseTask"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "scan-task",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "buildAndReleaseTask"
+      }
+    }
+  ]
+}
